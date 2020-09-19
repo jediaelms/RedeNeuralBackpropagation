@@ -1,5 +1,32 @@
 var train = true;
 
+var leitorDeCSV = new FileReader();
+var conjuntoTreino = [];
+
+window.onload = function init() {
+    leitorDeCSV.onload = leCSV;
+}
+
+function pegaCSV(inputFile) {
+    var file = inputFile.files[0];
+    leitorDeCSV.readAsText(file);
+}
+
+function leCSV(evt) {
+
+    var fileArr = evt.target.result.split('\n');
+    console.log(fileArr);
+    
+    for (var i=0; i<fileArr.length; i++) {
+
+        conjuntoTreino[i] = fileArr[i].split(',');
+            
+    }
+    
+    console.log(conjuntoTreino);
+
+}
+
 function setup() {
     //createCanvas(500, 500);
     //background(0);
