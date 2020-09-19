@@ -1,8 +1,8 @@
 var train = true;
 
 function setup() {
-    createCanvas(500, 500);
-    background(0);
+    //createCanvas(500, 500);
+    //background(0);
 
     nn = new RedeNeural(2, 3, 1);
 

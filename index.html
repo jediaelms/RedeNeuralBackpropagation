@@ -1,10 +1,38 @@
 <html>
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
-    <script src="sketch.js"></script>
-    <script src="matrix.js"></script>
-    <script src="RedeNeural.js"></script>
-  </head>
-  <body>
-  </body>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+  <script src="sketch.js"></script>
+  <script src="matrix.js"></script>
+  <script src="RedeNeural.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h2>Rede Neural Backpropagation</h2>
+  <p>Conjunto de treinamento: <input type="file" value="Escolha o arquivo com os dados de treinamento"></p>
+  <p>Número de neurônios: <input type="number" name="nroNeuronios" value="Média geométrica"></p>
+  <p>Escolha a função de transferência:<br>
+    <input type="radio" name="funcaoTransferencia" id="funcaoTransferencia" value="0"> <label for="funcaoTransferencia"> Logística</label>
+    <input type="radio" name="funcaoTransferencia" id="funcaoTransferencia" value="1"> <label for="funcaoTransferencia"> Tangente Hiperbólica</label>
+  </p>
+  <p>Condição de parada do treinamento <br>
+    <input type="radio" name="condicaoParada" value="0"> Erro máximo <input type="text" name="valorCondParada"
+      value="0.1">
+    <input type="radio" name="condicaoParada" value="1"> Número de iterações <input type="text" name="valorCondParada"
+      value="500">
+  </p>
+
+</body>
+
 </html>
